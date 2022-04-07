@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.PrincipalViewController">
+   <left>
+      <VBox prefHeight="600.0" prefWidth="192.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnEmpleados" maxWidth="1.7976931348623157E308" onAction="#onActionBtnEmpleados" prefHeight="63.0" prefWidth="192.0" styleClass="jfx-menubutton1" text="Empleados" />
+            <JFXButton fx:id="btnPlanilla" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onAction="#onActionBtnPlanilla" prefHeight="63.0" prefWidth="192.0" styleClass="jfx-menubutton1" text="Planilla" />
+            <JFXButton fx:id="btnSalir" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onAction="#onActionBtnSalir" prefHeight="63.0" prefWidth="192.0" styleClass="jfx-menubutton2" text="Salir" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="82.0" prefWidth="103.0" text="UNA PLANILLA" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="710.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.LoginViewController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imvFondo" fitHeight="400.0" fitWidth="715.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+               <image>
+                  <Image url="@../resources/FondoInicioRojo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: white;" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+               </StackPane.margin>
+               <children>
+                  <ImageView fitHeight="104.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/user.png" />
+                     </image>
+                  </ImageView>
+                  <HBox spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="54.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/Usuario-48.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="txtUsuario" focusColor="#073cda" labelFloat="true" prefHeight="56.0" prefWidth="237.0" promptText="Usuario" unFocusColor="#1e1e1e" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/Contraseña-48.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="txtClave" labelFloat="true" prefHeight="62.0" prefWidth="223.0" promptText="Contraseña" unFocusColor="BLACK" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" spacing="50.0">
+                     <children>
+                        <JFXButton fx:id="btnCancelar" buttonType="RAISED" cancelButton="true" onAction="#onActionBtnCancelar" prefHeight="62.0" prefWidth="119.0" style="-fx-background-color: #42A5F5;" text="Cancelar" />
+                        <JFXButton fx:id="btnIngresar" buttonType="RAISED" onAction="#onActionBtnIngresar" prefHeight="62.0" prefWidth="119.0" ripplerFill="#bc1616" style="-fx-background-color: #42A5F5;" text="Ingresar" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

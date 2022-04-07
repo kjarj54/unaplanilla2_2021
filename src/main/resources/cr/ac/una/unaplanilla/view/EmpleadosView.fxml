@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="495.0" prefWidth="683.0" styleClass="jfx-panelfondo" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.EmpleadosController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="424.0" prefWidth="636.0" styleClass="jfx-contenedor-secundario" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="26.0" layoutY="30.0" prefHeight="424.0" prefWidth="610.0" spacing="5.0" styleClass="jfx-contenedor-principal" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Label text="Control Empleados">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="285.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="289.0" prefWidth="276.0" spacing="25.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXTextField fx:id="txtID" onKeyPressed="#onKeyPressedTxtID" promptText="ID" />
+                              <JFXTextField fx:id="txtNombre" promptText="Nombre" />
+                              <JFXTextField fx:id="txtPApellido" promptText="Primer Apellido" />
+                              <JFXTextField fx:id="txtSApellido" promptText="Segundo Apellido" />
+                              <JFXTextField fx:id="txtCedula" promptText="Cedula" />
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                 <children>
+                                    <JFXRadioButton fx:id="rdbMasculino" onAction="#onActionRdbMaculino" selected="true" text="Masculino">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tggGenero" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rdbFemenino" onAction="#onActionRdbFemenino" text="Femenino" toggleGroup="$tggGenero" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="314.0" prefWidth="317.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="TOP_CENTER" prefHeight="114.0" prefWidth="317.0" spacing="40.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXCheckBox fx:id="chkAdministrador" onAction="#onActionChkAdministrador" text="Administrador" />
+                                    <JFXCheckBox fx:id="chkActivo" selected="true" text="Activo" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="186.0" prefWidth="317.0">
+                                 <children>
+                                    <HBox prefHeight="23.0" prefWidth="317.0" spacing="50.0">
+                                       <children>
+                                          <Label text="Fecha Ingreso" />
+                                          <Label text="Fecha salida" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="61.0" prefWidth="317.0" spacing="20.0">
+                                       <children>
+                                          <JFXDatePicker fx:id="dtpFingreso" accessibleText="Fecha de ingreso" prefHeight="37.0" prefWidth="85.0" />
+                                          <JFXDatePicker fx:id="dtpFsalida" accessibleText="Fecha de salida" prefHeight="40.0" prefWidth="83.0" />
+                                       </children>
+                                    </HBox>
+                                    <JFXTextField fx:id="txtCorreo" promptText="Correo" />
+                                    <JFXTextField fx:id="txtUsuario" promptText="Usuario" />
+                                    <JFXPasswordField fx:id="txtClave" promptText="Clave" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="600.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnNuevo" onAction="#onActionBtnNuevo" styleClass="jfx-btn-nuevo" text="Nuevo">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBuscar" onAction="#onActionBtnBuscar" styleClass="jfx-btn-buscar" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnEliminar" onAction="#onActionBtnEliminar" styleClass="jfx-btn-eliminar" text="Eliminar">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="jfx-btn-eliminar" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnGuardar" onAction="#onActionBtnGuardar" styleClass="jfx-btn-guardar" text="Guardar">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

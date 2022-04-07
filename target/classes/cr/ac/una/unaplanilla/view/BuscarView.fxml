@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="447.0" prefWidth="678.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.BuscarViewController">
+   <children>
+      <BorderPane fx:id="rootBorderPane" layoutX="206.0" layoutY="124.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox prefHeight="44.0" prefWidth="678.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="204.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnFiltrar" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="44.0" prefWidth="203.0" styleClass="jfx-btn-buscar" text="Filtrar" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="476.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnCancelar" maxHeight="1.7976931348623157E308" onAction="#OnActionBtnCancelar" prefHeight="30.0" prefWidth="94.0" styleClass="jfx-btn-eliminar" text="Cancelar" />
+                        <JFXButton fx:id="btnAceptar" maxHeight="1.7976931348623157E308" onAction="#OnActionBtnAceptar" prefHeight="44.0" prefWidth="132.0" styleClass="jfx-btn-generar" text="Aceptar" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <HBox prefHeight="41.0" prefWidth="678.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="41.0" prefWidth="196.0" styleClass="jfx-text-area" text="Parametros" />
+                     </children>
+                  </HBox>
+                  <HBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="41.0" prefWidth="493.0" styleClass="jfx-text-area" text="Busqueda de empleados" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox fx:id="rootScrollPane" prefHeight="516.0" prefWidth="216.0" />
+                     </center>
+                  </BorderPane>
+               </content>
+            </ScrollPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
